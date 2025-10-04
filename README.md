@@ -27,7 +27,7 @@ Overview of what I do, my mission, and the value I bring through my work. I focu
 ### 🎓 Education
 A section highlighting my educational background relevant to web development and technology.
 
-### 🛠 Skills
+### 🛠 Skills 
 A list of technical skills, tools, and technologies I use, such as:
 - HTML5
 - CSS3
@@ -42,7 +42,7 @@ Ways to get in touch with me for work, collaboration, or feedback.
 
 ## 🚀 Tech Stack
 
-- **Languages:** HTML, CSS, JavaScript
+- **Languages Used:** HTML, CSS, JavaScript
 - **Design:** Responsive Design, Flexbox, CSS Grid, Basic UX/UI
 - **Tools:** VS Code, Git, GitHub
 
@@ -51,3 +51,9 @@ Ways to get in touch with me for work, collaboration, or feedback.
 ## 📂 Project Structure
 
 To make sure everything works properly, keep **all files in the same folder**. This includes:
+home.avif
+icon.jpeg
+profile.webp
+index.html
+style.css
+script.js
