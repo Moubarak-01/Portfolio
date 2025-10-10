@@ -1,5 +1,5 @@
 # Portfolio
-A porttfolio of myself i made using Html, CSS and JavaScript 
+A portfolio of myself i made using Html, CSS and JavaScript 
 # 💼 Moubark Ali-Kparah | Front-End Developer Portfolio
 
 Welcome to my personal portfolio website! This is a fully responsive, modern, and interactive front-end portfolio built to showcase my skills, experience, and passion for web development.
