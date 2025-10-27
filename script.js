@@ -8,9 +8,8 @@ menuIcon.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-    let top = window.scrollY;
-
     sections.forEach(sec => {
+        let top = window.scrollY;
         let offset = sec.offsetTop - 100;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
