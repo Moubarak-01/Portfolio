@@ -7,9 +7,14 @@ menuIcon.addEventListener("click", () => {
     navbar.classList.toggle('active');
 });
 
+// scroll sections
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
 window.addEventListener("scroll", () => {
+    let top = window.scrollY;
+
     sections.forEach(sec => {
-        let top = window.scrollY;
         let offset = sec.offsetTop - 100;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
@@ -31,12 +36,14 @@ window.addEventListener("scroll", () => {
     let header = document.querySelector('header');
     header.classList.toggle('sticky', top > 100);
 
-    // Remove toggle icon and navbar on link click (scroll)
+    // Remove toggle icon and navbar on scroll
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 
-    // Footer animation on scroll
+    // Footer animation
     let footer = document.querySelector('footer');
-    footer.classList.toggle('show-animate', 
-    window.innerHeight + window.scrollY >= document.scrollingElement.scrollHeight);
+    footer.classList.toggle(
+        'show-animate',
+        window.innerHeight + window.scrollY >= document.scrollingElement.scrollHeight
+    );
 });
