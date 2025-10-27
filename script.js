@@ -11,7 +11,7 @@ menuIcon.addEventListener("click", () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll = () => {
+window.addEventListener("scroll", function() { // use function() to preserve `this` as window
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
@@ -26,16 +26,14 @@ window.onscroll = () => {
             });
             // active sections for animation on scroll
             sec.classList.add('show-animate');
-        }
-        // if want to animation that repeats on scroll use this
-        else {
+        } else {
+            // if want to animation that repeats on scroll use this
             sec.classList.remove('show-animate');
         }
     });
 
     // sticky navbar
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle icon and navbar when click navbar links (scroll)
@@ -44,6 +42,5 @@ window.onscroll = () => {
 
     // animation footer on scroll
     let footer = document.querySelector('footer');
-
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
-}
+});
