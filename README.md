@@ -14,8 +14,8 @@ My goal is to bring your message and identity to life in the most creative way p
 
 
 ## Screenshots
-  <link rel="icon" src="Screenshot 2025-10-04 182408.png">
-  <link rel="icon" src="Screenshot 2025-10-04 182435.png">
+  <link rel="icon" src="Screenshot 2025-10-04 182408.png" width="300">
+  <link rel="icon" src="Screenshot 2025-10-04 182435.png" width="300">
 
 ## 🧭 Sections Overview
 
