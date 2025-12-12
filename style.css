@@ -28,6 +28,32 @@ body {
     color: var(--text-color);
 }
 
+/* --- LINK COLOR UPDATES --- */
+/* This makes links inside text descriptions yellow (Main Color) */
+p a {
+    color: var(--main-color);
+    font-weight: 500;
+    transition: 0.3s;
+    text-decoration: underline; /* Optional: Adds underline to make them look like links */
+}
+
+p a:hover {
+    color: var(--text-color); /* Turns white when hovered */
+}
+
+/* This makes Project Titles yellow if they are links */
+.education-content .content h3 a {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.education-content .content h3 a:hover {
+    color: #fff;
+    text-shadow: 0 0 1rem var(--main-color);
+}
+/* ------------------------- */
+
+
 .header {
     position: fixed;
     top: 0;
@@ -83,11 +109,13 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+/* --- HOME SECTION UPDATE --- */
+/* Ensured profile.webp is set correctly as the background */
 .home {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('profile.webp') no-repeat;
+    background: url('profile.webp') no-repeat; /* Ensure this file is in your folder */
     background-size: cover;
     background-position: center;
 }
@@ -101,7 +129,6 @@ section {
     position: relative;
     display: inline-block;
     font-size: 5.12rem;
-    /* change here */
     font-weight: 700;
     line-height: 1.3;
 }
@@ -116,7 +143,6 @@ section {
 }
 
 .home-content .text-animate h3 {
-    /* change here */
     font-size: 3.05rem;
     font-weight: 700;
     color: transparent;
@@ -297,8 +323,10 @@ span {
 
 .about-img img {
     width: 90%;
+    height: 90%; /* Added height to ensure image fits circle */
     border-radius: 50%;
     border: .2rem solid var(--main-color);
+    object-fit: cover; /* Ensures your new photo fits perfectly in the circle */
 }
 
 .about-img .circle-spin {
@@ -351,7 +379,6 @@ span {
     background: var(--bg-color);
 }
 
-/* NEW: Experience Section Styling */
 .experience {
     display: flex;
     justify-content: center;
@@ -372,7 +399,6 @@ span {
     background: var(--bg-color);
 }
 
-/* Timeline/Box layout for Education and Projects */
 .education .education-row,
 .projects .education-row,
 .experience .education-row { 
@@ -420,23 +446,20 @@ span {
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
-    /* Added transition for the hover/open effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* HOVER/OPEN EMPHASIS EFFECT - APPLIED TO ALL TIMELINE ITEMS AND INCREASED SIZE */
 .education .education-content .content:hover,
 .education .education-content .content:has(details[open]),
 .experience .education-content .content:hover,
 .experience .education-content .content:has(details[open]),
 .projects .education-content .content:hover,
 .projects .education-content .content:has(details[open]) {
-    transform: translateY(-8px) scale(1.05); /* Increased effect */
-    box-shadow: 0 0 3rem rgba(240, 236, 0, 0.4); /* Custom shadow based on main color */
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 0 3rem rgba(240, 236, 0, 0.4);
 }
 
 
-/* Styles for the new inline details section */
 .education-content .content p details {
     margin-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -446,10 +469,8 @@ span {
 .education-content .content p details summary {
     cursor: pointer;
     margin: 0;
-    /* Resetting default summary styling */
     list-style: none;
     padding: 0;
-    /* Reusing button styles on summary */
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -471,7 +492,6 @@ span {
 }
 
 .education-content .content p details .details-content {
-    /* Resetting the default paragraph style for inner content */
     border: none;
     padding: 0;
     margin: 1rem 0 0 0;
@@ -494,14 +514,14 @@ span {
     z-index: -1;
     transition: .5s;
 }
-/* Adjusting color alternation based on new section order: */
-.education .education-content .content::before { /* Education is on bg-color section */
+
+.education .education-content .content::before { 
     background: var(--second-bg-color);
 }
-.experience .education-content .content::before { /* Experience is on second-bg-color section */
+.experience .education-content .content::before { 
     background: var(--bg-color);
 }
-.projects .education-content .content::before { /* Projects is on bg-color section */
+.projects .education-content .content::before { 
     background: var(--second-bg-color);
 }
 
@@ -524,44 +544,38 @@ span {
     font-size: 2rem;
     line-height: 1.2;
 }
-.education-content .content h3 a {
-    color: inherit;
-    transition: color 0.3s;
-}
-.education-content .content h3 a:hover {
-    color: var(--main-color);
-}
+
 
 .education-content .content p {
     font-size: 1.6rem;
     padding-top: .5rem;
 }
 
-/* Custom styles for images within the timeline project view - IMPROVED FIT */
+/* Custom styles for images within the timeline project view - UNIFORM SIZE + FULL IMAGE */
 .project-img-container {
+    width: 100%;
+    height: 22rem;        /* Fixed height for all boxes */
     margin: 1rem 0;
-    max-height: 20rem; 
     overflow: hidden;
-    border-radius: 0.3rem;
-    background-color: var(--bg-color); 
-    display: flex;
+    border-radius: 0.6rem;
+    display: flex;        
     justify-content: center;
-    align-items: center; /* Set back to center */
-    padding-top: 0; /* Removed explicit padding */
+    align-items: center;
+    background-color: #000; /* Letterbox background */
+    border: 1px solid var(--main-color); 
 }
-/* Adjusting container color for alternating background */
+
 .projects .project-img-container {
-    background-color: var(--second-bg-color);
+    background-color: #000; 
 }
 
 .project-img-container img {
     width: 100%;
     height: 100%;
+    object-fit: contain;  /* Shows FULL image without cropping */
     display: block;
-    object-fit: contain; 
 }
 
-/* Removal of jump-link based hidden details section styles */
 .hidden-details-section,
 .projects .hidden-details-section {
     display: none !important; 
@@ -935,7 +949,7 @@ span {
         padding: 1rem 4%;
         background: var(--main-color);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        z-index: 101; /* FIX: Raised z-index to overlay header */
+        z-index: 101; 
         transition: .25s ease;
         transition-delay: .25s;
     }
@@ -1047,36 +1061,23 @@ span {
 
 /* KEYFRAMES ANIMATION */
 @keyframes homeBgText {
-
-    0%,
-    10%,
-    100% {
+    0%, 10%, 100% {
         background-position: -33rem 0;
     }
-
-    65%,
-    85% {
+    65%, 85% {
         background-position: 0 0;
     }
 }
 
 @keyframes homeCursorText {
-
-    0%,
-    10%,
-    100% {
+    0%, 10%, 100% {
         width: 0;
     }
-
-    65%,
-    78%,
-    85% {
+    65%, 78%, 85% {
         width: 100%;
         opacity: 1;
     }
-
-    75%,
-    81% {
+    75%, 81% {
         opacity: 0;
     }
 }
