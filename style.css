@@ -199,10 +199,6 @@ section {
     color: var(--main-color);
 }
 
-.btn-box .btn:nth-child(2):hover {
-    color: var(--bg-color);
-}
-
 .btn-box .btn:nth-child(2)::before {
     background: var(--main-color);
 }
@@ -550,8 +546,8 @@ span {
     background-color: var(--bg-color); 
     display: flex;
     justify-content: center;
-    align-items: center; /* Changed back to center */
-    padding-top: 0; /* Removed top padding */
+    align-items: center; /* Set back to center */
+    padding-top: 0; /* Removed explicit padding */
 }
 /* Adjusting container color for alternating background */
 .projects .project-img-container {
@@ -939,12 +935,17 @@ span {
         padding: 1rem 4%;
         background: var(--main-color);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        z-index: 1;
+        z-index: 101; /* FIX: Raised z-index to overlay header */
         transition: .25s ease;
         transition-delay: .25s;
     }
 
-    .navbar.active .active-nav {
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav {
         position: absolute;
         top: 0;
         left: -100%;
