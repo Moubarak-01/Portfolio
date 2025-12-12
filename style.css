@@ -29,19 +29,19 @@ body {
 }
 
 /* --- LINK COLOR UPDATES --- */
-/* This makes links inside text descriptions yellow (Main Color) */
+/* Makes links inside descriptions yellow (Main Color) */
 p a {
     color: var(--main-color);
     font-weight: 500;
     transition: 0.3s;
-    text-decoration: underline; /* Optional: Adds underline to make them look like links */
+    text-decoration: underline;
 }
 
 p a:hover {
-    color: var(--text-color); /* Turns white when hovered */
+    color: var(--text-color);
 }
 
-/* This makes Project Titles yellow if they are links */
+/* Makes Project Titles yellow if they are links */
 .education-content .content h3 a {
     color: var(--main-color);
     transition: 0.3s;
@@ -51,8 +51,6 @@ p a:hover {
     color: #fff;
     text-shadow: 0 0 1rem var(--main-color);
 }
-/* ------------------------- */
-
 
 .header {
     position: fixed;
@@ -109,15 +107,19 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-/* --- HOME SECTION UPDATE --- */
-/* Ensured profile.webp is set correctly as the background */
+/* --- HOME SECTION FIX --- */
 .home {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('profile.webp') no-repeat; /* Ensure this file is in your folder */
+    width: 100%;
+    min-height: 100vh;
+    /* Explicit background properties */
+    background-image: url('profile.webp');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .home-content {
@@ -323,10 +325,10 @@ span {
 
 .about-img img {
     width: 90%;
-    height: 90%; /* Added height to ensure image fits circle */
+    height: 90%;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
-    object-fit: cover; /* Ensures your new photo fits perfectly in the circle */
+    object-fit: cover;
 }
 
 .about-img .circle-spin {
@@ -545,23 +547,23 @@ span {
     line-height: 1.2;
 }
 
-
 .education-content .content p {
     font-size: 1.6rem;
     padding-top: .5rem;
 }
 
-/* Custom styles for images within the timeline project view - UNIFORM SIZE + FULL IMAGE */
+/* --- PROJECT IMAGES FIX --- */
+/* Fixed height, black background, full image containment */
 .project-img-container {
     width: 100%;
-    height: 22rem;        /* Fixed height for all boxes */
+    height: 22rem;
     margin: 1rem 0;
     overflow: hidden;
     border-radius: 0.6rem;
     display: flex;        
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Letterbox background */
+    background-color: #000;
     border: 1px solid var(--main-color); 
 }
 
@@ -572,7 +574,7 @@ span {
 .project-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* Shows FULL image without cropping */
+    object-fit: contain;  /* Shows full image, no cropping */
     display: block;
 }
 
