@@ -29,7 +29,6 @@ body {
 }
 
 /* --- LINK COLOR UPDATES --- */
-/* Makes links inside descriptions yellow (Main Color) */
 p a {
     color: var(--main-color);
     font-weight: 500;
@@ -41,7 +40,6 @@ p a:hover {
     color: var(--text-color);
 }
 
-/* Makes Project Titles yellow if they are links */
 .education-content .content h3 a {
     color: var(--main-color);
     transition: 0.3s;
@@ -107,18 +105,13 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-/* --- HOME SECTION FIX --- */
+/* --- HOME SECTION --- */
 .home {
     display: flex;
     align-items: center;
     padding: 0 9%;
     width: 100%;
     min-height: 100vh;
-    /* Explicit background properties */
-    background-image: url('profile.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     position: relative;
 }
 
@@ -552,8 +545,7 @@ span {
     padding-top: .5rem;
 }
 
-/* --- PROJECT IMAGES FIX --- */
-/* Fixed height, black background, full image containment */
+/* --- PROJECT IMAGES --- */
 .project-img-container {
     width: 100%;
     height: 22rem;
@@ -574,7 +566,7 @@ span {
 .project-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* Shows full image, no cropping */
+    object-fit: contain;
     display: block;
 }
 
@@ -642,8 +634,22 @@ span {
     width: 100%;
 }
 
+/* --- UPDATED SKILLS ANIMATION SECTION --- */
+
+/* Base style for the progress bar container */
 .skills-content .progress {
     padding: 1rem 0;
+    transition: 0.3s ease;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* 1. SCALE / POP EFFECT ON HOVER */
+.skills-content .progress:hover {
+    transform: scale(1.05); /* Grow slightly larger */
+    background: rgba(255, 255, 255, 0.05); /* Subtle light background */
+    cursor: default;
 }
 
 .skills-content .progress h3 {
@@ -656,12 +662,18 @@ span {
     color: var(--text-color);
 }
 
+/* 2. GLOW EFFECT on Bar */
+.skills-content .progress:hover .bar {
+    box-shadow: 0 0 1rem var(--main-color); /* Yellow glow around border */
+}
+
 .skills-content .progress .bar {
     height: 2.5rem;
     border-radius: .6rem;
     border: .2rem solid var(--main-color);
     padding: .5rem;
     margin: 1rem 0;
+    transition: 0.3s;
 }
 
 .skills-content .progress .bar span {
@@ -669,7 +681,40 @@ span {
     height: 100%;
     border-radius: .3rem;
     background: var(--main-color);
+    position: relative;
+    overflow: hidden; 
 }
+
+/* 3. SHINE EFFECT Overlay (Back and Forth) */
+.skills-content .progress .bar span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    /* Diagonal beam of light */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-20deg);
+}
+
+/* Trigger Back and Forth Animation on Hover */
+.skills-content .progress:hover .bar span::after {
+    /* Moves continuously left-to-right and back */
+    animation: shine 2s linear infinite alternate;
+}
+
+/* Keyframes for the beam movement */
+@keyframes shine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ------------------------------------- */
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
     width: 90%;
