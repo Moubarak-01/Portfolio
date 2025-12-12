@@ -30,7 +30,7 @@ A reactive web application for discovering movies.
   - **Performance:** Implements dynamic skeleton loading states for a smooth user experience.
   - **CI/CD:** Automated pipelines via Vercel for rapid testing and deployment.
 
-### 🌐 Personal Portfolio Website
+### 🌐 [Personal Portfolio Website](https://moubarak-01.github.io/Portfolio/)
 The source code for this website.
 - **Tech Stack:** HTML5, CSS3, JavaScript.
 - **Key Features:**
