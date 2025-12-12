@@ -11,7 +11,7 @@ menuIcon.addEventListener("click", () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-window.addEventListener("scroll", function() { // use function() to preserve `this` as window
+window.addEventListener("scroll", function() {
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
@@ -27,7 +27,6 @@ window.addEventListener("scroll", function() { // use function() to preserve `th
             // active sections for animation on scroll
             sec.classList.add('show-animate');
         } else {
-            // if want to animation that repeats on scroll use this
             sec.classList.remove('show-animate');
         }
     });
@@ -44,3 +43,11 @@ window.addEventListener("scroll", function() { // use function() to preserve `th
     let footer = document.querySelector('footer');
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 });
+
+// --- DARK MODE TOGGLE ---
+let darkModeIcon = document.querySelector('#darkMode-icon');
+
+darkModeIcon.onclick = () => {
+    darkModeIcon.classList.toggle('bx-sun');
+    document.body.classList.toggle('light-mode');
+};
