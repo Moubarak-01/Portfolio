@@ -6,7 +6,7 @@ Welcome to my personal portfolio repository! This project showcases my journey a
 
 ## 📌 About Me
 
-I am a results-driven **Front-End Developer** specializing in creating scalable UIs and extending functionality into full-stack architecture. My passion lies in leveraging cutting-edge technologies—such as **React**, **TypeScript**, and **Electron**—to deliver intuitive user experiences.
+I am a results-driven **Front-End Developer** specializing in creating scalable UIs and extending functionality into full-stack architecture. My passion lies in leveraging cutting-edge technologies such as **React**, **TypeScript**, and **Electron** to deliver intuitive user experiences.
 
 I am particularly interested in AI integration, working with tools like the **Gemini API** and **Whisper** to build intelligent, context-aware applications.
 
