@@ -63,6 +63,7 @@ If you are cloning this repository to run the portfolio locally, ensure the foll
 ├── home.avif
 ├── icon.jpeg
 └── profile.webp
+```
 
 ## 📬 Contact
 Feel free to reach out for collaborations or just a friendly hello!
