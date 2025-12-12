@@ -22,7 +22,7 @@ A stealth desktop overlay providing non-intrusive AI assistance.
   - **Real-Time Audio:** Hybrid speech-to-text system using a local Whisper server to bypass API rate limits.
   - **System Integration:** Global keyboard shortcuts and native OS integration for seamless background operation.
 
-### 🎬 [Movie Search App](https://github.com/Moubarak-01/Movie-Search-App-)
+### 🎬 [Movie Search App](https://movie-search-178fc6vic-moubarak-01s-projects.vercel.app/)
 A reactive web application for discovering movies.
 - **Tech Stack:** React, Tailwind CSS, AppWrite.
 - **Key Features:**
@@ -34,9 +34,11 @@ A reactive web application for discovering movies.
 The source code for this website.
 - **Tech Stack:** HTML5, CSS3, JavaScript.
 - **Key Features:**
+  - **Light/Dark Mode:** Custom theme toggle with a modern "Silver/Concrete" light theme and "Neon/Dark" mode.
+  - **Interactive Animations:** Custom shine effects, hover scaling, and continuous loop animations on skill bars.
+  - **Contact System:** Fully functional email form integrated with Formspree for direct messaging.
+  - **Accessibility:** Optimized with focus states, semantic HTML, and high-contrast colors.
   - Achieved a **100/100 Lighthouse performance score**.
-  - Fully responsive design using modern CSS Grid and Flexbox.
-  - Custom animations and interactive UI elements.
 
 ---
 
@@ -60,9 +62,11 @@ If you are cloning this repository to run the portfolio locally, ensure the foll
 ├── index.html
 ├── style.css
 ├── script.js
+├── 20251009_152105(1).jpg
 ├── home.avif
 ├── icon.jpeg
-└── profile.webp
+├── Moubely icon.png
+└── Screenshot 2025-11-11 144901.png
 ```
 
 ## 📬 Contact
@@ -72,8 +76,3 @@ Feel free to reach out for collaborations or just a friendly hello!
 - **GitHub:** [Moubarak-01](https://github.com/Moubarak-01/)
 
 
-### Key Changes Made:
-1.  **Professional Bio:** Replaced the generic intro with the strong summary from your `index.html` file.
-2.  **Featured Projects:** Added a section detailing **Moubely** and the **Movie Search App**, including their tech stacks and key features as described in your code.
-3.  **Expanded Skills:** Updated the skills section to include your advanced capabilities like **React**, **Electron**, and **AI/ML APIs** (Gemini, DeepSeek) rather than just HTML/CSS.
-4.  **Formatting:** Used a cleaner table layout for skills and added links to your live projects.
