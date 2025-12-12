@@ -184,11 +184,11 @@ section {
 
 #download {
     margin-top: 1.2em;
-    padding: 2px;                            
-    text-decoration: none; 
+    padding: 2px;
+    text-decoration: none;
     border: none;
     background: transparent;
-}   
+}
 
 .btn-box .btn:hover {
     color: var(--main-color);
@@ -352,21 +352,34 @@ span {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+    background: var(--bg-color);
 }
 
-/* NEW: Projects section styling - similar to education section */
+/* NEW: Experience Section Styling */
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--second-bg-color);
+}
+
 .projects {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding-bottom: 7rem; /* Increased padding for better spacing */
-    background: var(--second-bg-color); /* Explicitly set alternating background */
+    padding-bottom: 7rem;
+    background: var(--bg-color);
 }
 
+/* Timeline/Box layout for Education and Projects */
 .education .education-row,
-.projects .education-row { /* Applying to both education and projects sections */
+.projects .education-row,
+.experience .education-row { 
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
@@ -411,7 +424,68 @@ span {
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
+    /* Added transition for the hover/open effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* HOVER/OPEN EMPHASIS EFFECT - APPLIED TO ALL TIMELINE ITEMS AND INCREASED SIZE */
+.education .education-content .content:hover,
+.education .education-content .content:has(details[open]),
+.experience .education-content .content:hover,
+.experience .education-content .content:has(details[open]),
+.projects .education-content .content:hover,
+.projects .education-content .content:has(details[open]) {
+    transform: translateY(-8px) scale(1.05); /* Increased effect */
+    box-shadow: 0 0 3rem rgba(240, 236, 0, 0.4); /* Custom shadow based on main color */
+}
+
+
+/* Styles for the new inline details section */
+.education-content .content p details {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.education-content .content p details summary {
+    cursor: pointer;
+    margin: 0;
+    /* Resetting default summary styling */
+    list-style: none;
+    padding: 0;
+    /* Reusing button styles on summary */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+.education-content .content p details summary::-webkit-details-marker {
+    display: none;
+}
+.education-content .content p details[open] summary::before {
+    content: "Hide Details";
+}
+.education-content .content p details:not([open]) summary::before {
+    content: "Read More";
+}
+
+.education-content .content p details .details-content {
+    /* Resetting the default paragraph style for inner content */
+    border: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+}
+
+.education-content .content p details .details-content b {
+    color: var(--main-color);
+}
+
 
 .education-content .content::before {
     content: '';
@@ -424,6 +498,17 @@ span {
     z-index: -1;
     transition: .5s;
 }
+/* Adjusting color alternation based on new section order: */
+.education .education-content .content::before { /* Education is on bg-color section */
+    background: var(--second-bg-color);
+}
+.experience .education-content .content::before { /* Experience is on second-bg-color section */
+    background: var(--bg-color);
+}
+.projects .education-content .content::before { /* Projects is on bg-color section */
+    background: var(--second-bg-color);
+}
+
 
 .education-content .content:hover::before {
     width: 100%;
@@ -441,6 +526,14 @@ span {
 
 .education-content .content h3 {
     font-size: 2rem;
+    line-height: 1.2;
+}
+.education-content .content h3 a {
+    color: inherit;
+    transition: color 0.3s;
+}
+.education-content .content h3 a:hover {
+    color: var(--main-color);
 }
 
 .education-content .content p {
@@ -448,10 +541,41 @@ span {
     padding-top: .5rem;
 }
 
+/* Custom styles for images within the timeline project view - IMPROVED FIT */
+.project-img-container {
+    margin: 1rem 0;
+    max-height: 20rem; 
+    overflow: hidden;
+    border-radius: 0.3rem;
+    background-color: var(--bg-color); 
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Changed back to center */
+    padding-top: 0; /* Removed top padding */
+}
+/* Adjusting container color for alternating background */
+.projects .project-img-container {
+    background-color: var(--second-bg-color);
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain; 
+}
+
+/* Removal of jump-link based hidden details section styles */
+.hidden-details-section,
+.projects .hidden-details-section {
+    display: none !important; 
+}
+
+
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--bg-color); /* Changed back to bg-color for alternating pattern */
+    background: var(--second-bg-color); 
 }
 
 .skills h2 {
@@ -497,7 +621,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--bg-color);
+    background: var(--second-bg-color); 
     z-index: -1;
     transition: .5s;
 }
@@ -548,7 +672,7 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 75%;
+    width: 60%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
@@ -570,7 +694,7 @@ span {
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color); 
 }
 
 .contact h2 {
@@ -731,19 +855,14 @@ span {
     animation: none;
 }
 
-/* Sections with odd-child styling */
-.about, .projects, .contact, .footer {
+/* Sections with alternating background colors */
+.about, .experience, .skills {
     background: var(--second-bg-color);
 }
-
-.education {
+.education, .projects, .contact {
     background: var(--bg-color);
 }
 
-section:nth-child(odd) .animate.scroll,
-.footer .animate.scroll {
-    background: var(--second-bg-color);
-}
 
 .education .education-box .animate.scroll {
     width: 105%;
@@ -751,6 +870,7 @@ section:nth-child(odd) .animate.scroll,
 
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
+.experience.show-animate .animate.scroll, 
 .projects.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
@@ -824,12 +944,7 @@ section:nth-child(odd) .animate.scroll,
         transition-delay: .25s;
     }
 
-    .navbar.active {
-        left: 0;
-        transition-delay: 0s;
-    }
-
-    .navbar .active-nav {
+    .navbar.active .active-nav {
         position: absolute;
         top: 0;
         left: -100%;
