@@ -354,7 +354,19 @@ span {
     padding-bottom: 5rem;
 }
 
-.education .education-row {
+/* NEW: Projects section styling - similar to education section */
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 7rem; /* Increased padding for better spacing */
+    background: var(--second-bg-color); /* Explicitly set alternating background */
+}
+
+.education .education-row,
+.projects .education-row { /* Applying to both education and projects sections */
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
@@ -439,7 +451,7 @@ span {
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color); /* Changed back to bg-color for alternating pattern */
 }
 
 .skills h2 {
@@ -558,6 +570,7 @@ span {
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--second-bg-color);
 }
 
 .contact h2 {
@@ -718,6 +731,15 @@ span {
     animation: none;
 }
 
+/* Sections with odd-child styling */
+.about, .projects, .contact, .footer {
+    background: var(--second-bg-color);
+}
+
+.education {
+    background: var(--bg-color);
+}
+
 section:nth-child(odd) .animate.scroll,
 .footer .animate.scroll {
     background: var(--second-bg-color);
@@ -729,6 +751,7 @@ section:nth-child(odd) .animate.scroll,
 
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
+.projects.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
@@ -870,7 +893,7 @@ section:nth-child(odd) .animate.scroll,
         font-size: 5.2rem;
     }
 
-    .education {
+    .education, .projects {
         padding: 10rem 4% 5rem 5%;
     }
 
