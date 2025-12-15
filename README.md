@@ -11,35 +11,33 @@ I am a results-driven **Front-End Developer** specializing in creating scalable 
 I am particularly interested in AI integration, working with tools like the **Gemini API** and **Whisper** to build intelligent, context-aware applications.
 
 ---
-
 ## 🚀 Featured Projects
 
 ### 🤖 [Moubely (Desktop Assistant)](https://github.com/Moubarak-01/Moubely)
-A stealth desktop overlay providing non-intrusive AI assistance.
+A stealth desktop overlay providing non-intrusive AI assistance, engineered for reliability and observability.
 - **Tech Stack:** Electron, TypeScript, Gemini 2.0 Flash / DeepSeek R1 / Perplexity APIs.
 - **Key Features:**
-  - **Multi-Model AI Engine:** Aggregates multiple top-tier AI models with context-aware switching.
-  - **Real-Time Audio:** Hybrid speech-to-text system using a local Whisper server to bypass API rate limits.
-  - **System Integration:** Global keyboard shortcuts and native OS integration for seamless background operation.
+  - **7-Layer Waterfall Engine:** Architected a failover routing system that automatically cascades between 7 models (Gemini, DeepSeek, Groq, etc.) upon rate limit or failure, guaranteeing **zero downtime**.
+  - **Live Telemetry:** Implemented comprehensive terminal logging to visualize IPC data flow, model switching, and real-time backend decisions for enhanced observability.
+  - **Hybrid Audio System:** Developed a local Whisper server with a custom restart loop to process audio in continuous chunks, effectively bypassing API rate limits and preventing connection timeouts during long meetings.
 
 ### 🎬 [Movie Search App](https://movie-search-178fc6vic-moubarak-01s-projects.vercel.app/)
-A reactive web application for discovering movies.
+A reactive movie discovery platform featuring secure Appwrite authentication and intelligent mobile deep-linking.
 - **Tech Stack:** React, Tailwind CSS, AppWrite.
 - **Key Features:**
-  - **Data Visualization:** Fetches data from external REST APIs with secure backend authentication.
-  - **Performance:** Implements dynamic skeleton loading states for a smooth user experience.
-  - **CI/CD:** Automated pipelines via Vercel for rapid testing and deployment.
+  - **Rich Detail Display:** Designed a custom modal architecture to display detailed movie information (overview, rating, vote count) while preserving user context.
+  - **Intelligent Streaming Routing:** Engineered a smart traffic routing system that detects user devices (PC/Web/Mobile) to launch native Android Intents or fallback to web streaming (Nkiri/Anilab), optimizing the mobile user experience.
+  - **Performance & CI/CD:** Achieved fast loading via dynamic skeleton states and utilized automated pipelines via Vercel for rapid deployment.
 
 ### 🌐 [Personal Portfolio Website](https://moubarak-01.github.io/Portfolio/)
-The source code for this website.
+The source code for this personal portfolio, optimized for performance and accessibility.
 - **Tech Stack:** HTML5, CSS3, JavaScript.
 - **Key Features:**
-  - **Light/Dark Mode:** Custom theme toggle with a modern "Silver/Concrete" light theme and "Neon/Dark" mode.
-  - **Interactive Animations:** Custom shine effects, hover scaling, and continuous loop animations on skill bars.
-  - **Contact System:** Fully functional email form integrated with Formspree for direct messaging.
+  - **Performance Metric:** Achieved a perfect **100/100 Lighthouse performance score**.
+  - **Interactive UX:** Custom **Light/Dark Mode** toggle, interactive animations, custom shine effects, and hover scaling on skill bars.
+  - **Deployment Automation:** Automated deployment pipelines via **GitHub Actions** with custom domain configuration and SEO optimization.
   - **Accessibility:** Optimized with focus states, semantic HTML, and high-contrast colors.
-  - Achieved a **100/100 Lighthouse performance score**.
-
+  
 ---
 
 ## 🛠 Technical Skills
