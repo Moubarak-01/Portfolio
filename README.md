@@ -14,12 +14,13 @@ I am particularly interested in AI integration, working with tools like the **Ge
 ## 🚀 Featured Projects
 
 ### 🤖 [Moubely (Desktop Assistant)](https://github.com/Moubarak-01/Moubely)
-A stealth desktop overlay providing non-intrusive AI assistance, engineered for reliability and observability.
-- **Tech Stack:** Electron, TypeScript, Gemini 2.0 Flash / DeepSeek R1 / Perplexity APIs.
+A stealthy, multi-model AI desktop assistant engineered with Electron for real-time screen analysis and audio transcription.
+- **Tech Stack:** Electron, TypeScript, Gemini 3.0 Pro / Claude 3.7 / DeepSeek / Whisper.
 - **Key Features:**
-  - **7-Layer Waterfall Engine:** Architected a failover routing system that automatically cascades between 7 models (Gemini, DeepSeek, Groq, etc.) upon rate limit or failure, guaranteeing **zero downtime**.
-  - **Live Telemetry:** Implemented comprehensive terminal logging to visualize IPC data flow, model switching, and real-time backend decisions for enhanced observability.
-  - **Hybrid Audio System:** Developed a local Whisper server with a custom restart loop to process audio in continuous chunks, effectively bypassing API rate limits and preventing connection timeouts during long meetings.
+  - **Core Architecture & Stealth Logic:** Engineered a stealth desktop overlay using Electron with advanced window management. Implemented an aggressive "Ghost Window" fix using ready-to-show callbacks and a synchronized stealth toggle that hides the OS mouse pointer and protects the window from screen-sharing software.
+  - **AI Integration & Evolutionary Routing:** Expanded the "Waterfall" system to an **18-model logic engine** that cascades across tiers (Gemini 3.0 Pro, Claude 3.7, DeepSeek) for zero downtime. Includes a history sanitization slicer and a vision-based "Solve" tool for automatic vision/text routing.
+  - **Real-Time Audio Engine & Race Condition Handling:** Hybrid speech-to-text system using a local Whisper server. Features a ticket-based sorting system to resolve "race conditions" and ensure chronological transcriptions, plus a 1000ms cloud fallback logic.
+  - **System-Level Features & Optimization:** Optimized footprint via RAM-based smart caching of student profiles. Refactored to type-only imports to resolve circular dependency crashes and integrated live terminal telemetry for real-time data flow monitoring.
 
 ### 🎬 [Movie Search App](https://movie-search-178fc6vic-moubarak-01s-projects.vercel.app/)
 A reactive movie discovery platform featuring secure Appwrite authentication and intelligent mobile deep-linking.
@@ -47,7 +48,7 @@ The source code for this personal portfolio, optimized for performance and acces
 | **Languages** | HTML/CSS, Python, JavaScript, TypeScript |
 | **Frontend** | React, Tailwind CSS, Vite, React Query, Radix UI |
 | **Backend & System** | Electron (IPC, Native Modules), Node.js, REST APIs |
-| **AI & ML** | Gemini API (1.5 & 2.0), DeepSeek R1, Perplexity, Whisper (Local/Cloud) |
+| **AI & ML** | Gemini API (3.0 Pro & 1.5), Claude 3.7, DeepSeek R1, Perplexity, Whisper (Local/Cloud) |
 | **Tools** | Git/GitHub, Linux (Bash), VS Code |
 
 ---
