@@ -227,35 +227,50 @@
                             <div class="project-img-container">
                                 <img src="Moubely icon.png" alt="Moubely Desktop Assistant AI Icon">
                             </div>
-                            <p>
-                                <b>Core Architecture & Stealth Logic:</b> Engineered a stealth desktop overlay using
-                                Electron, implementing advanced window management (transparency, click-through
-                                forwarding, and always-on-top states) to provide non-intrusive AI assistance. I recently
-                                improved this by implementing an aggressive "Ghost Window" fix using ready-to-show
-                                callbacks to solve rendering bugs, and added a synchronized stealth toggle that
-                                simultaneously hides the OS mouse pointer and protects the window from screen-sharing
-                                software.
-                                <br><br><b>AI Integration & Evolutionary Routing:</b> Originally architected as a
-                                7-layer "Waterfall" routing system, I have since expanded this to a massive 18-model
-                                logic engine. This system now intelligently cascades across tiers—ranging from supreme
-                                reasoning models like Gemini 3.0 Pro and Claude 3.7 to efficiency models like
-                                DeepSeek—ensuring zero downtime. To stabilize this, I engineered a history sanitization
-                                slicer to prevent API rejections and a vision-based "Solve" tool that automatically
-                                routes traffic to the correct Vision or Text brain based on the payload.
-                                <br><br><b>Real-Time Audio Engine & Race Condition Handling:</b> Developed a hybrid
-                                speech-to-text system using a local Whisper server with a custom restart loop to process
-                                audio in continuous chunks, effectively bypassing API rate limits. To further refine
-                                this, I implemented a ticket-based sorting system that resolves "race conditions" where
-                                cloud responses might arrive out of order, ensuring perfect chronological
-                                transcriptions. I also added a 1000ms cloud fallback logic to trigger whenever the local
-                                server queue is over-taxed.
-                                <br><br><b>System-Level Features & Optimization:</b> Beyond global keyboard shortcuts
-                                (Ctrl+H) and native Tray APIs, I have optimized the application’s footprint through
-                                RAM-based smart caching, which reads and stores student profiles once on startup for
-                                instant retrieval. I also refactored the underlying architecture to use type-only
-                                imports, successfully resolving circular dependency crashes that previously caused
-                                startup hangs, and integrated live terminal telemetry to monitor IPC and LLM data flow
-                                in real-time.
+                            <p>A stealthy, multi-model AI desktop assistant engineered with Electron for real-time
+                                screen analysis and audio transcription.
+                            <details class="read-more-details">
+                                <summary class="btn read-more-btn">Read More</summary>
+                                <p class="details-content">
+                                    <b>Core Architecture & Stealth Logic:</b> Engineered a stealth desktop overlay using
+                                    Electron, implementing advanced window management (transparency, click-through
+                                    forwarding, and always-on-top states) to provide non-intrusive AI assistance. I
+                                    recently
+                                    improved this by implementing an aggressive "Ghost Window" fix using ready-to-show
+                                    callbacks to solve rendering bugs, and added a synchronized stealth toggle that
+                                    simultaneously hides the OS mouse pointer and protects the window from
+                                    screen-sharing
+                                    software.
+                                    <br><br><b>AI Integration & Evolutionary Routing:</b> Originally architected as a
+                                    7-layer "Waterfall" routing system, I have since expanded this to a massive 18-model
+                                    logic engine. This system now intelligently cascades across tiers—ranging from
+                                    supreme
+                                    reasoning models like Gemini 3.0 Pro and Claude 3.7 to efficiency models like
+                                    DeepSeek—ensuring zero downtime. To stabilize this, I engineered a history
+                                    sanitization
+                                    slicer to prevent API rejections and a vision-based "Solve" tool that automatically
+                                    routes traffic to the correct Vision or Text brain based on the payload.
+                                    <br><br><b>Real-Time Audio Engine & Race Condition Handling:</b> Developed a hybrid
+                                    speech-to-text system using a local Whisper server with a custom restart loop to
+                                    process
+                                    audio in continuous chunks, effectively bypassing API rate limits. To further refine
+                                    this, I implemented a ticket-based sorting system that resolves "race conditions"
+                                    where
+                                    cloud responses might arrive out of order, ensuring perfect chronological
+                                    transcriptions. I also added a 1000ms cloud fallback logic to trigger whenever the
+                                    local
+                                    server queue is over-taxed.
+                                    <br><br><b>System-Level Features & Optimization:</b> Beyond global keyboard
+                                    shortcuts
+                                    (Ctrl+H) and native Tray APIs, I have optimized the application’s footprint through
+                                    RAM-based smart caching, which reads and stores student profiles once on startup for
+                                    instant retrieval. I also refactored the underlying architecture to use type-only
+                                    imports, successfully resolving circular dependency crashes that previously caused
+                                    startup hangs, and integrated live terminal telemetry to monitor IPC and LLM data
+                                    flow
+                                    in real-time.
+                                </p>
+                            </details>
                             </p>
                         </div>
                     </div>
