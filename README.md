@@ -14,12 +14,12 @@ I am particularly interested in AI integration, working with tools like the **Ge
 ## 🚀 Featured Projects
 
 ### 🤖 [Moubely (Desktop Assistant)](https://github.com/Moubarak-01/Moubely)
-A stealthy, multi-model AI desktop assistant engineered with Electron for real-time screen analysis and audio transcription.
+A high-performance Privacy-First Overlay using advanced Electron window management to ensure zero-latency data security for enterprise-grade productivity workflows.
 - **Tech Stack:** Electron, TypeScript, Gemini 3.0 Pro / Claude 3.7 / DeepSeek / Whisper.
 - **Key Features:**
-  - **Core Architecture & Stealth Logic:** Engineered a stealth desktop overlay using Electron with advanced window management. Implemented an aggressive "Ghost Window" fix using ready-to-show callbacks and a synchronized stealth toggle that hides the OS mouse pointer and protects the window from screen-sharing software.
-  - **AI Integration & Evolutionary Routing:** Expanded the "Waterfall" system to an **18-model logic engine** that cascades across tiers (Gemini 3.0 Pro, Claude 3.7, DeepSeek) for zero downtime. Includes a history sanitization slicer and a vision-based "Solve" tool for automatic vision/text routing.
-  - **Real-Time Audio Engine & Race Condition Handling:** Hybrid speech-to-text system using a local Whisper server. Features a ticket-based sorting system to resolve "race conditions" and ensure chronological transcriptions, plus a 1000ms cloud fallback logic.
+  - **Core Architecture & Privacy-First Overlay:** Engineered a high-performance Privacy-First Overlay using Electron with advanced window management. Implemented zero-latency rendering using ready-to-show callbacks and a distraction-free interaction mode that seamlessly integrates with OS workflows while maintaining data security.
+  - **Resilient Multi-Provider LLM Orchestration:** Expanded the "Resilient Multi-Provider LLM Controller" system to an **18-model logic engine** that cascades across tiers (Gemini 3.0 Pro, Claude 3.7, DeepSeek) for zero downtime. Includes a history sanitization slicer and a vision-based "Solve" tool for automatic vision/text routing.
+  - **Real-Time Multi-Modal Data Streams:** Hybrid speech-to-text system using a local Whisper server. Features a ticket-based sorting system to resolve race conditions and ensure chronological transcriptions, plus a 1000ms cloud fallback logic.
   - **System-Level Features & Optimization:** Optimized footprint via RAM-based smart caching of student profiles. Refactored to type-only imports to resolve circular dependency crashes and integrated live terminal telemetry for real-time data flow monitoring.
 
 ### 🎬 [Movie Search App](https://movie-search-178fc6vic-moubarak-01s-projects.vercel.app/)
@@ -57,7 +57,7 @@ The source code for this personal portfolio, optimized for performance and acces
 
 If you are cloning this repository to run the portfolio locally, ensure the following files are kept in the root directory:
 
-```text
+```
 ├── index.html
 ├── style.css
 ├── script.js
@@ -67,6 +67,39 @@ If you are cloning this repository to run the portfolio locally, ensure the foll
 ├── Moubely icon.png
 └── Screenshot 2025-11-11 144901.png
 ```
+
+## 💻 How to Run Locally
+
+This is a static site built with HTML, CSS, and Vanilla JavaScript. No complex build tools are required.
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Moubarak-01/Portfolio.git
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd Portfolio
+   ```
+
+3. **Launch the site:**
+   You can view the site in your browser using one of these methods:
+
+   - **Method 1: VS Code Live Server (Recommended)**
+     1. Install the **Live Server** extension in VS Code.
+     2. Open `index.html`.
+     3. Press `Alt` + `L` then `Alt` + `O` (Windows) or click **"Go Live"** at the bottom right.
+
+   - **Method 2: Python Simple HTTP Server**
+     1. Open your terminal in the project folder.
+     2. Run this command:
+        ```bash
+        python -m http.server 8000
+        ```
+     3. Open your browser and go to `http://localhost:8000`.
+
+   - **Method 3: Direct File Open**
+     - Simply double-click `index.html` to open it in your browser.
 
 ## 📬 Contact
 Feel free to reach out for collaborations or just a friendly hello!
